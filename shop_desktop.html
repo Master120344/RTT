@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Redeeming The Time Today</title>
+    <meta name="description" content="Shop with purpose at Redeeming The Time Today. Every purchase supports our community programs in Rahway, NJ. Browse our collection of t-shirts, hats, and beanies.">
+    <meta name="keywords" content="charity shop, nonprofit merch, recovery support, Rahway NJ, t-shirts, hats, beanies, community support">
+    <meta name="author" content="Redeeming The Time Today">
+    <link rel="canonical" href="https://redeemingthetimetoday.com/shop">
+    <meta property="og:title" content="Shop | Redeeming The Time Today">
+    <meta property="og:description" content="Shop with purpose. Every purchase supports our community programs helping individuals overcome addiction and life challenges.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://redeemingthetimetoday.com/shop">
+    <meta property="og:site_name" content="Redeeming The Time Today">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Shop | Redeeming The Time Today">
+    <meta name="twitter:description" content="Shop with purpose. Every purchase supports our community programs.">
+    <link rel="stylesheet" href="shop_desktop.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="nav-content">
+            <a href="index_desktop.html" class="logo">
+                <span class="logo-main">Redeeming The Time</span>
+                <span class="logo-tagline">Shop With Purpose</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-link active" data-category="all">All Products</a></li>
+                <li><a href="#" class="nav-link" data-category="shirts">Shirts</a></li>
+                <li><a href="#" class="nav-link" data-category="hats">Hats</a></li>
+                <li><a href="#" class="nav-link" data-category="beanies">Beanies</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="index_desktop.html" class="back-link">Back to Main Site</a>
+                <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#" class="mobile-nav-link" data-category="all">All Products</a>
+            <a href="#" class="mobile-nav-link" data-category="shirts">Shirts</a>
+            <a href="#" class="mobile-nav-link" data-category="hats">Hats</a>
+            <a href="#" class="mobile-nav-link" data-category="beanies">Beanies</a>
+            <div class="mobile-menu-divider"></div>
+            <a href="index_desktop.html" class="mobile-nav-link">Back to Main Site</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Shop With Purpose</p>
+            <h1 class="hero-title">Wear Your <span>Support</span></h1>
+            <p class="hero-description">Every purchase directly supports our community programs. Quality apparel that makes a difference in Rahway, New Jersey.</p>
+        </div>
+    </section>
+
+    <section class="shop-section">
+        <div class="container">
+            <div class="category-filter" id="categoryFilter">
+                <button class="filter-btn active" data-category="all">All Products</button>
+                <button class="filter-btn" data-category="shirts">Shirts</button>
+                <button class="filter-btn" data-category="hats">Hats</button>
+                <button class="filter-btn" data-category="beanies">Beanies</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid"></div>
+
+            <div class="empty-state" id="emptyState" style="display: none;">
+                <p>No products found in this category.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="impact-section">
+        <div class="container">
+            <div class="impact-content fade-in">
+                <h2 class="impact-title">Every Purchase Makes a Difference</h2>
+                <p class="impact-text">100% of profits from our shop go directly to supporting individuals in recovery and our community programs. When you wear our apparel, you're helping transform lives.</p>
+                <div class="impact-stats">
+                    <div class="impact-stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Lives Changed</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="stat-number">15+</span>
+                        <span class="stat-label">Years Serving</span>
+                    </div>
+                    <div class="impact-stat">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Profits Donated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content fade-in">
+                <h2 class="newsletter-title">Stay Connected</h2>
+                <p class="newsletter-text">Be the first to know about new products and special offers.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">Redeeming The Time</div>
+                <p class="footer-description">Every purchase from our shop directly supports our community programs in Rahway, NJ. Thank you for shopping with purpose.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#" data-category="all">All Products</a></li>
+                    <li><a href="#" data-category="shirts">Shirts</a></li>
+                    <li><a href="#" data-category="hats">Hats</a></li>
+                    <li><a href="#" data-category="beanies">Beanies</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Organization</h4>
+                <ul>
+                    <li><a href="index_desktop.html">Main Website</a></li>
+                    <li><a href="mailto:robertsmith_broadwayfashion@yahoo.com">Contact Us</a></li>
+                    <li><a href="tel:512-902-0819">512-902-0819</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="index_desktop.html#donate">Donate</a></li>
+                    <li><a href="index_desktop.html#contact">Volunteer</a></li>
+                    <li><a href="index_desktop.html#programs">Programs</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Redeeming The Time Today. All rights reserved. Made with &#10084; in Rahway, NJ</p>
+        </div>
+    </footer>
+
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <div class="cart-header-left">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <h2>Your Cart</h2>
+                <span class="cart-header-count" id="cartHeaderCount">0</span>
+            </div>
+            <button class="cart-close" id="cartClose" aria-label="Close cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+        <div class="cart-body" id="cartBody">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="cart-empty-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                </div>
+                <h3>Your cart is empty</h3>
+                <p>Looks like you haven't added anything yet.</p>
+                <button class="btn-continue" id="btnContinueShopping">Continue Shopping</button>
+            </div>
+            <div class="cart-items" id="cartItems"></div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span class="subtotal-amount" id="subtotalAmount">$0.00</span>
+            </div>
+            <p class="cart-shipping-note">Shipping and taxes calculated at checkout</p>
+            <button class="btn-checkout" id="btnCheckout">
+                Checkout
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+            <button class="btn-continue-shopping" id="btnContinueShoppingFooter">Continue Shopping</button>
+            <p class="cart-mission-note">100% of profits support our community programs</p>
+        </div>
+    </div>
+
+    <div class="quick-view-overlay" id="quickViewOverlay"></div>
+    <div class="quick-view-modal" id="quickViewModal">
+        <button class="quick-view-close" id="quickViewClose" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="quick-view-content">
+            <div class="quick-view-image">
+                <img id="quickViewImage" src="" alt="">
+            </div>
+            <div class="quick-view-details">
+                <div class="quick-view-header">
+                    <span class="quick-view-category" id="quickViewCategory"></span>
+                    <span class="quick-view-badge" id="quickViewBadge">New</span>
+                </div>
+                <h2 class="quick-view-title" id="quickViewTitle"></h2>
+                <p class="quick-view-price" id="quickViewPrice"></p>
+                <p class="quick-view-description" id="quickViewDescription"></p>
+                <div class="quick-view-sizes" id="quickViewSizes"></div>
+                <div class="quick-view-quantity">
+                    <label>Quantity</label>
+                    <div class="quantity-selector">
+                        <button class="qty-btn" id="qtyDecrease">-</button>
+                        <span class="qty-value" id="qtyValue">1</span>
+                        <button class="qty-btn" id="qtyIncrease">+</button>
+                    </div>
+                </div>
+                <button class="btn-add-to-cart" id="btnAddToCart">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span id="addToCartText">Add to Cart - $0.00</span>
+                </button>
+                <p class="quick-view-mission">Every purchase supports our community programs</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="checkout-overlay" id="checkoutOverlay"></div>
+    <div class="checkout-modal" id="checkoutModal">
+        <button class="checkout-close" id="checkoutClose" aria-label="Close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <div class="checkout-content">
+            <div class="checkout-form-section">
+                <div class="checkout-steps">
+                    <div class="step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Information</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Shipping</span>
+                    </div>
+                    <div class="step-line"></div>
+                    <div class="step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Payment</span>
+                    </div>
+                </div>
+
+                <form id="checkoutForm">
+                    <div class="checkout-step-content" id="step1Content">
+                        <h2>Contact Information</h2>
+                        <div class="form-group">
+                            <label for="checkoutEmail">Email</label>
+                            <input type="email" id="checkoutEmail" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkoutFirstName">First Name</label>
+                                <input type="text" id="checkoutFirstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkoutLastName">Last Name</label>
+                                <input type="text" id="checkoutLastName" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkoutPhone">Phone</label>
+                            <input type="tel" id="checkoutPhone" placeholder="(555) 555-5555">
+                        </div>
+                        <button type="button" class="btn-next-step" id="toStep2">
+                            Continue to Shipping
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                        </button>
+                    </div>
+
+                    <div class="checkout-step-content" id="step2Content" style="display: none;">
+                        <h2>Shipping Address</h2>
+                        <div class="form-group">
+                            <label for="checkoutAddress">Address</label>
+                            <input type="text" id="checkoutAddress" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="checkoutCity">City</label>
+                                <input type="text" id="checkoutCity" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkoutState">State</label>
+                                <input type="text" id="checkoutState" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="checkoutZip">ZIP Code</label>
+                            <input type="text" id="checkoutZip" required>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn-back-step" id="backToStep1">Back</button>
+                            <button type="button" class="btn-next-step" id="toStep3">
+                                Continue to Payment
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="checkout-step-content" id="step3Content" style="display: none;">
+                        <h2>Payment Details</h2>
+                        <div class="demo-notice">
+                            <p>This is a demo checkout. No real payment will be processed.</p>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" id="cardNumber" placeholder="4242 4242 4242 4242">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cardExpiry">Expiry Date</label>
+                                <input type="text" id="cardExpiry" placeholder="MM/YY">
+                            </div>
+                            <div class="form-group">
+                                <label for="cardCvc">CVC</label>
+                                <input type="text" id="cardCvc" placeholder="123">
+                            </div>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="button" class="btn-back-step" id="backToStep2">Back</button>
+                            <button type="submit" class="btn-complete-order">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                Complete Order
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="checkout-step-content checkout-success" id="stepSuccess" style="display: none;">
+                        <div class="success-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </div>
+                        <h2>Order Confirmed!</h2>
+                        <p>Thank you for your purchase. Your order has been placed and you'll receive a confirmation email shortly.</p>
+                        <p class="success-mission">Every purchase supports our community programs. Thank you!</p>
+                        <button type="button" class="btn-continue-shopping-success" id="btnContinueShoppingSuccess">Continue Shopping</button>
+                    </div>
+                </form>
+            </div>
+            <div class="checkout-summary">
+                <h2>Order Summary</h2>
+                <div class="checkout-items" id="checkoutItems"></div>
+                <div class="checkout-totals">
+                    <div class="total-row">
+                        <span>Subtotal</span>
+                        <span id="checkoutSubtotal">$0.00</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Shipping</span>
+                        <span id="checkoutShipping">$5.99</span>
+                    </div>
+                    <div class="total-row">
+                        <span>Tax</span>
+                        <span id="checkoutTax">$0.00</span>
+                    </div>
+                    <div class="total-row total-final">
+                        <span>Total</span>
+                        <span id="checkoutTotal">$0.00</span>
+                    </div>
+                </div>
+                <div class="checkout-mission-note">
+                    <span class="mission-highlight">100% of profits</span> support our community programs
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        <span id="toastMessage">Added to cart!</span>
+    </div>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">&#8593;</button>
+
+    <script src="shop_desktop.js"></script>
+</body>
+</html>

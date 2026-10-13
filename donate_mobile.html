@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate | Redeeming The Time Today</title>
+<meta name="description" content="Support Redeeming The Time Today with your donation.">
+<link rel="stylesheet" href="donate_mobile.css">
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+
+<header>
+<div class="header-content">
+<a href="/" class="logo">Redeeming The Time</a>
+</div>
+</header>
+
+<main>
+
+<section class="hero">
+<h1>Support Our <span>Mission</span></h1>
+<p>Your gift helps individuals overcome addiction, rebuild their lives, and find lasting hope.</p>
+<img src="2.jpg" alt="Community members at Redeeming The Time Today">
+</section>
+
+<section class="stats">
+<div>
+<strong>500+</strong>
+<span>Lives Changed</span>
+</div>
+<div>
+<strong>92%</strong>
+<span>To Programs</span>
+</div>
+<div>
+<strong>15+</strong>
+<span>Years Serving</span>
+</div>
+</section>
+
+<section class="form-wrapper">
+<h2>Make a Donation</h2>
+
+<form id="donation-form">
+<div class="amounts">
+<button type="button" class="tier-btn active" data-amount="100">$100</button>
+<button type="button" class="tier-btn" data-amount="250">$250</button>
+<button type="button" class="tier-btn" data-amount="500">$500</button>
+<button type="button" class="tier-btn" data-amount="1000">$1,000</button>
+</div>
+
+<div class="custom">
+<span>$</span>
+<input type="number" id="custom-amount" placeholder="Custom amount" min="1" inputmode="numeric">
+</div>
+
+<input type="text" id="first-name" placeholder="First Name" autocomplete="given-name" required>
+<input type="text" id="last-name" placeholder="Last Name" autocomplete="family-name" required>
+<input type="email" id="email" placeholder="Email" autocomplete="email" required>
+
+<div class="captcha">
+<div class="cf-turnstile" data-sitekey="0x4AAAAAACK_NC7vXvGe0yOT"></div>
+</div>
+
+<button type="submit" id="submit-btn">Donate $100</button>
+
+<p class="tax">Your donation is tax deductible. A receipt will be emailed to you.</p>
+</form>
+</section>
+
+</main>
+
+<script src="donate_mobile.js" defer></script>
+</body>
+</html>

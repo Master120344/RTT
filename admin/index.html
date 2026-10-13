@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Dashboard</title>
+
+<link rel="stylesheet" href="admin.css">
+
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>Admin</h2>
+    <button onclick="showPage('dashboard')">Dashboard</button>
+    <button onclick="showPage('donations')">Donations</button>
+    <button onclick="showPage('products')">Products</button>
+</div>
+
+<div class="main">
+
+    <div id="dashboard" class="page active">
+        <h1>Dashboard</h1>
+        <div class="cards">
+            <div class="card">
+                <h3>Total Donations</h3>
+                <p id="total">$0</p>
+            </div>
+            <div class="card">
+                <h3>Orders</h3>
+                <p id="orders">0</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="donations" class="page">
+        <h1>Donations</h1>
+        <table id="donationTable"></table>
+    </div>
+
+    <div id="products" class="page">
+        <h1>Products</h1>
+
+        <input id="name" placeholder="Product Name">
+        <input id="price" placeholder="Price">
+        <button onclick="addProduct()">Add</button>
+
+        <div id="productList"></div>
+    </div>
+
+</div>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

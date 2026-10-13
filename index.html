@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+(function(){
+var ua=navigator.userAgent||navigator.vendor||window.opera;
+var touch=('ontouchstart'in window)||(navigator.maxTouchPoints>0)||(navigator.msMaxTouchPoints>0);
+var coarse=window.matchMedia('(pointer:coarse)').matches;
+var small=Math.min(screen.width,screen.height)<=820;
+var mobileUA=/Android|iPhone|iPad|iPod|Mobile|Tablet|Silk|Kindle|BlackBerry|Opera Mini|IEMobile/i.test(ua);
+var isMobile=(mobileUA&&touch)||(touch&&coarse&&small);
+if(isMobile){
+location.replace('index_mobile.html');
+}else{
+location.replace('index_desktop.html');
+}
+})();
+</script>
+</head>
+<body></body>
+</html>

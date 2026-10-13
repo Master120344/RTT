@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Donate | Redeeming The Time Today</title>
+<meta name="description" content="Support Redeeming The Time Today with your donation.">
+<link rel="stylesheet" href="donation_desktop.css">
+<script src="https://js.stripe.com/v3/"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+
+<body>
+
+<header>
+<div class="header-content">
+<a href="/" class="logo">Redeeming The Time</a>
+<a href="/" class="back-link">← Back to Home</a>
+</div>
+</header>
+
+<main>
+<div class="donation-container">
+
+<div class="donation-info">
+<h1>Support Our <span>Mission</span></h1>
+
+<p class="description">
+Your gift helps individuals overcome addiction, rebuild their lives, and find lasting hope.
+Every dollar goes directly toward recovery programs, mentorship, and housing assistance.
+</p>
+
+<div class="impact-image">
+<img src="2.jpg" alt="Community members at Redeeming The Time Today">
+</div>
+
+<div class="stats">
+<div class="stat">
+<div class="stat-number">500+</div>
+<div class="stat-label">Lives Changed</div>
+</div>
+<div class="stat">
+<div class="stat-number">92%</div>
+<div class="stat-label">To Programs</div>
+</div>
+<div class="stat">
+<div class="stat-number">15+</div>
+<div class="stat-label">Years Serving</div>
+</div>
+</div>
+</div>
+
+<div class="donation-form-wrapper">
+<h2>Make a Donation</h2>
+
+<form id="donation-form">
+
+<div class="form-section">
+<label>Select Amount</label>
+<div class="tier-buttons">
+<button type="button" class="tier-btn" data-amount="100">$100</button>
+<button type="button" class="tier-btn active" data-amount="250">$250</button>
+<button type="button" class="tier-btn" data-amount="500">$500</button>
+<button type="button" class="tier-btn" data-amount="1000">$1,000</button>
+</div>
+</div>
+
+<div class="form-section">
+<label>Or Enter Custom Amount</label>
+<div class="custom-input">
+<span class="dollar-sign">$</span>
+<input type="number" id="custom-amount" min="1">
+</div>
+</div>
+
+<div class="form-row">
+<div class="form-section">
+<input type="text" id="first-name" placeholder="First Name" required>
+</div>
+<div class="form-section">
+<input type="text" id="last-name" placeholder="Last Name" required>
+</div>
+</div>
+
+<div class="form-section">
+<input type="email" id="email" placeholder="Email" required>
+</div>
+
+<div class="form-section">
+<div class="cf-turnstile" data-sitekey="0x4AAAAAACK_NC7vXvGe0yOT"></div>
+</div>
+
+<button type="submit" id="submit-btn" class="donate-btn">
+Donate $250
+</button>
+
+<p class="tax-note">
+Your donation is tax-deductible. You will receive a receipt via email.
+</p>
+
+</form>
+</div>
+
+</div>
+</main>
+
+<footer>
+<p>© 2026 Redeeming The Time Today · Rahway, New Jersey</p>
+<p>501(c)(3) Nonprofit Organization</p>
+</footer>
+
+<script src="donation_desktop.js"></script>
+</body>
+</html>
