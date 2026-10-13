@@ -26,8 +26,8 @@
     <link rel="preconnect" href="https://challenges.cloudflare.com">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
-    <link rel="stylesheet" href="index_desktop.css">
-    <link rel="stylesheet" href="october.css?v=20261013">
+    <link rel="stylesheet" href="index_desktop.css?v=20261013b">
+    <link rel="stylesheet" href="october.css?v=20261013b">
 </head>
 <body class="october-site home-desktop">
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -96,7 +96,15 @@
             <p class="section-eyebrow">Our October 2026 focus</p>
             <h2 id="october-theme-title">A little light goes <span>a long way.</span></h2>
             <p class="october-theme-lead">The evenings get a little longer. The small acts of care matter just as much.</p>
-            <p>This October, we are making room for hope in everyday life. A conversation, a prayer, a practical helping hand. A reminder that no one has to find their way forward alone.</p>
+            <div class="october-story">
+                <p class="section-eyebrow">A thought for the season</p>
+                <p>Picture a neighbor coming home after a hard day. The street is getting dark, but someone has left a porch light on and saved a place at the table. The day has not suddenly become easy. Still, that small welcome says: you matter, and you do not have to carry everything alone.</p>
+                <p>We can be that welcome for one another. This October, make the call you have been putting off. Share a meal. Offer a prayer, then help with the next practical step. A little light can be enough to help someone begin again.</p>
+            </div>
+            <blockquote class="october-verse">
+                <p>“Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.”</p>
+                <footer>Matthew 5:16 · King James Version</footer>
+            </blockquote>
             <a class="october-text-link" href="#contact">Find your place in the community <span aria-hidden="true">↗</span></a>
         </div>
         <div class="october-theme-art fade-in">
@@ -237,7 +245,7 @@
             <p class="section-eyebrow">The community calendar</p>
             <h2 class="section-title">Make time for <span>community.</span></h2>
             <p class="events-subtitle">
-                Our monthly meeting and seasonal dates, in one place. Choose any date to see that day’s details.
+                Church gatherings, RTT plans, and local help for October and November 2026. Choose a date for details. All times are Central Time.
             </p>
         </div>
 
@@ -253,20 +261,40 @@
                     <button type="button" class="calendar-show-all">Whole month</button>
                     <p class="calendar-selection-status" role="status" aria-live="polite"></p>
                 </div>
+                <div class="calendar-filters" role="group" aria-label="Filter calendar events">
+                    <button type="button" class="calendar-filter active" data-calendar-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="calendar-filter" data-calendar-filter="church" aria-pressed="false">Church</button>
+                    <button type="button" class="calendar-filter" data-calendar-filter="rtt" aria-pressed="false">RTT</button>
+                    <button type="button" class="calendar-filter" data-calendar-filter="community" aria-pressed="false">Community help</button>
+                </div>
                 <div class="event-calendar-grid"></div>
-                <p class="calendar-legend"><span>● Monthly schedule</span><span>○ Seasonal observance</span></p>
+                <p class="calendar-legend"><span>● Church &amp; RTT gatherings</span><span>○ Community help &amp; seasonal dates</span></p>
             </div>
 
             <div class="event-headlines fade-in">
                 <div class="event-headlines-top">
                     <h3>On the calendar</h3>
-                    <p>Select a day, or see the whole month. Meeting details are available through our team.</p>
+                    <p>Select a day, or browse the whole month. Open a listing for practical details and the organizing group.</p>
                 </div>
                 <div class="event-headline-cards"><article class="event-headline-card">
-                    <div class="event-meta"><span class="event-date">October 21, 2026</span><span class="event-time">1:00 PM Central</span></div>
-                    <h3>Redeeming The Time Meeting</h3>
-                    <p>The existing monthly schedule is the 21st at 1:00 PM Central. Contact us to confirm this month’s meeting and request the Zoom details.</p>
-                    <a class="event-detail-link" href="#contact">Request meeting details <span aria-hidden="true">↗</span></a>
+                    <div class="event-meta"><span class="event-date">Every Sunday · October &amp; November 2026</span><span class="event-time">12:30–2:00 PM Central Time</span></div>
+                    <h3>Sunday Church</h3>
+                    <p>Dove Springs iHOP Church · 1844 Teri Rd, Austin, TX 78744.</p>
+                    <p>Prayer is also every Wednesday at 6:30 PM. Bible study is every Friday, 6:30–8:00 PM, at the same church address.</p>
+                </article>
+                <article class="event-headline-card">
+                    <div class="event-meta"><span class="event-date">Saturday, October 24, 2026</span><span class="event-time">1:00–1:30 PM Central Time</span></div>
+                    <h3>RTT Meeting</h3>
+                    <p>A short afternoon gathering to plan practical care, outreach, and the next steps for our community.</p>
+                    <p>Pleasant Hill Branch, Austin Public Library · 211 E William Cannon Dr, Austin, TX 78745, United States.</p>
+                    <p>Planned date. Library venue confirmation is pending; contact RTT before attending.</p>
+                    <a class="event-detail-link" href="#contact">Ask about the meeting <span aria-hidden="true">↗</span></a>
+                </article>
+                <article class="event-headline-card">
+                    <div class="event-meta"><span class="event-date">Thursday, October 29, 2026</span><span class="event-time">1:00 PM Central Time</span></div>
+                    <h3>Community Outreach</h3>
+                    <p>A planned afternoon for connecting with neighbors and helping identify practical next steps. The location and activities are being arranged.</p>
+                    <a class="event-detail-link" href="#contact">Ask how to take part <span aria-hidden="true">↗</span></a>
                 </article></div>
             </div>
         </div>
@@ -412,8 +440,9 @@
 
     <button class="scroll-top" aria-label="Scroll to top">&#8593;</button>
 
-    <script src="october-calendar.js?v=20261013"></script>
-    <script src="index_desktop.js?v=20261013"></script>
-    <script src="october.js?v=20261013"></script>
+    <script src="community-events.js?v=20261013b"></script>
+    <script src="october-calendar.js?v=20261013b"></script>
+    <script src="index_desktop.js?v=20261013b"></script>
+    <script src="october.js?v=20261013b"></script>
 </body>
 </html>

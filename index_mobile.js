@@ -261,61 +261,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }, { once: true });
     }
 
-    function getTimeZoneParts(date, timeZone) {
-        var formatter = new Intl.DateTimeFormat('en-US', {
-            timeZone: timeZone,
-            year: 'numeric',
-            month: '2-digit',
-            day: '2-digit',
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
-            hourCycle: 'h23'
-        });
-        var values = {};
-
-        formatter.formatToParts(date).forEach(function (part) {
-            if (part.type !== 'literal') {
-                values[part.type] = Number(part.value);
-            }
-        });
-
-        return {
-            year: values.year,
-            month: values.month - 1,
-            day: values.day,
-            hour: values.hour,
-            minute: values.minute,
-            second: values.second
-        };
-    }
-
-    function centralTimeToDate(year, month, day, hour, minute) {
-        var timeZone = 'America/Chicago';
-        var desiredUtc = Date.UTC(year, month, day, hour, minute || 0, 0);
-        var utcGuess = desiredUtc;
-
-        for (var i = 0; i < 3; i++) {
-            var parts = getTimeZoneParts(new Date(utcGuess), timeZone);
-            var localAsUtc = Date.UTC(parts.year, parts.month, parts.day, parts.hour, parts.minute, parts.second);
-            utcGuess += desiredUtc - localAsUtc;
-        }
-
-        return new Date(utcGuess);
-    }
-
-    function getNextMeetingDate(now) {
-        var timeZone = 'America/Chicago';
-        var centralNow = getTimeZoneParts(now, timeZone);
-        var target = centralTimeToDate(centralNow.year, centralNow.month, 21, 13, 0);
-
-        if (now.getTime() >= target.getTime()) {
-            target = centralTimeToDate(centralNow.year, centralNow.month + 1, 21, 13, 0);
-        }
-
-        return target;
-    }
-
     function setCountdownValue(id, value) {
         var element = document.getElementById(id);
         if (element) {
@@ -327,7 +272,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!countdownRoot) return;
 
         var now = new Date();
-        var target = getNextMeetingDate(now);
+        var target = new Date(countdownRoot.dataset.rttDate || '2026-10-24T13:00:00-05:00');
+        if (Number.isNaN(target.getTime())) return;
         var diff = Math.max(0, target.getTime() - now.getTime());
         var totalSeconds = Math.floor(diff / 1000);
         var days = Math.floor(totalSeconds / 86400);
@@ -335,13 +281,15 @@ document.addEventListener('DOMContentLoaded', function () {
         var minutes = Math.floor((totalSeconds % 3600) / 60);
         var seconds = totalSeconds % 60;
 
+        var label = document.querySelector('.meeting-countdown-label');
+        if (label) label.textContent = now.getTime() >= target.getTime() ? 'Check the calendar for meeting updates' : 'Planned meeting date in';
         setCountdownValue('meeting-countdown-days', days);
         setCountdownValue('meeting-countdown-hours', hours);
         setCountdownValue('meeting-countdown-minutes', minutes);
         setCountdownValue('meeting-countdown-seconds', seconds);
     }
 
-    if (countdownRoot && window.Intl && Intl.DateTimeFormat) {
+    if (countdownRoot) {
         updateMeetingCountdown();
         setInterval(updateMeetingCountdown, 1000);
     }

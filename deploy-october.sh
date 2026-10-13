@@ -8,8 +8,8 @@ backup_dir="$HOME/website-backups"
 files=(
   index_desktop.html index_desktop.js index_mobile.html index_mobile.js
   mission_mobile.html programs_mobile.html team_mobile.html
-  shop_desktop.html shop_mobile.html
-  october.css october-calendar.js october.js october-art.svg
+  shop_desktop.html shop_mobile.html donate_desktop.html donate_mobile.html
+  october.css community-events.js october-calendar.js october.js october-art.svg
 )
 
 if [[ ! -d "$website_dir" || ! -f "$website_dir/index.html" ]]; then
@@ -39,4 +39,4 @@ for file in "${files[@]}"; do
   chmod 644 "$staged_file"
   mv -f -- "$staged_file" "$website_dir/$file"
 done
-printf '%s\n' 'October edition deployed: 13 presentation files updated.'
+printf '%s\n' 'October edition deployed: 16 presentation files updated.'
