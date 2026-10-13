@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Redeeming The Time Today | Building Forward Together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redeeming The Time Today | A Little Light This October</title>
     <meta name="description" content="Redeeming The Time Today helps individuals and families in Austin through support, mentorship, practical help, family encouragement, and community connection.">
     <meta name="theme-color" content="#6f8f69">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,8 +12,10 @@
     <link rel="preconnect" href="https://challenges.cloudflare.com">
     <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <link rel="stylesheet" href="index_mobile.css">
+    <link rel="stylesheet" href="october.css?v=20261013">
 </head>
-<body>
+<body class="october-site home-mobile">
+    <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="mobile-header">
         <div class="mobile-header-inner">
             <a href="index_mobile.html" class="mobile-logo">
@@ -41,7 +43,13 @@
         </nav>
     </header>
 
-    <main>
+    <div class="october-ribbon">
+        <span class="october-ribbon-date">October 2026</span>
+        <span>A season for showing up.</span>
+        <a href="#october-theme">This month’s focus <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <main id="main-content">
         <section class="hero-mobile">
             <div class="hero-mobile-image-wrap">
                 <img
@@ -52,13 +60,15 @@
                     fetchpriority="high"
                 >
                 <div class="hero-mobile-overlay"></div>
+                <p class="hero-photo-caption">People, purpose, and a place to belong.</p>
             </div>
             <div class="hero-mobile-content">
                 <p class="section-eyebrow">Austin, Texas</p>
-                <h1>Hope for <span>Every Life</span></h1>
+                <h1>Hope for <span>every life.</span></h1>
                 <p class="hero-mobile-text">
-                    Building Forward Together with support, mentorship, practical help, family encouragement, and community connection for people rebuilding their lives.
+                    A helping hand. A familiar face. Someone who keeps showing up. We walk alongside people rebuilding their lives with faith, encouragement, and practical care.
                 </p>
+                <p class="hero-season-note">This October, let’s make room for one another.</p>
                 <div class="hero-mobile-buttons">
                     <a href="#contact" class="btn-primary">Get Help</a>
                     <a href="donate_mobile.html" class="btn-secondary">Donate</a>
@@ -66,50 +76,58 @@
             </div>
         </section>
 
-        <section class="monthly-theme-section may-theme-section fade-in">
-            <div class="monthly-theme-card may-theme-card">
-                <div class="monthly-theme-image-wrap may-theme-image-wrap">
-                    <img src="2.jpg" alt="Austin community support and encouragement" loading="eager">
-                    <div class="monthly-theme-image-overlay"></div>
-                </div>
-
-                <div class="monthly-theme-body">
-                    <p class="section-eyebrow monthly-theme-eyebrow">May 2026 Theme</p>
-                    <h2>Building Forward <span>Together</span></h2>
-                    <p>
-                        This May, Redeeming The Time Today is focused on steady community support for people rebuilding their lives in Austin, Texas and surrounding communities.
-                    </p>
-                    <p>
-                        We are showing up through outreach, trusted relationships, practical help, mentorship, prayer, family encouragement, and local partners who keep the work moving.
-                    </p>
-                    <p>
-                        Building Forward Together means helping people take the next right step with dignity, consistency, and real community connection.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <section id="october-theme" class="october-theme-section" aria-labelledby="october-theme-title">
+        <div class="october-theme-intro fade-in">
+            <p class="section-eyebrow">Our October 2026 focus</p>
+            <h2 id="october-theme-title">A little light goes <span>a long way.</span></h2>
+            <p class="october-theme-lead">The evenings get a little longer. The small acts of care matter just as much.</p>
+            <p>This October, we are making room for hope in everyday life. A conversation, a prayer, a practical helping hand. A reminder that no one has to find their way forward alone.</p>
+            <a class="october-text-link" href="#contact">Find your place in the community <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="october-theme-art fade-in">
+            <img src="october-art.svg" alt="" aria-hidden="true" loading="lazy" width="760" height="540">
+            <p>A little autumn warmth. A lot of room for hope.</p>
+        </div>
+        <div class="october-theme-notes">
+            <article class="fade-in">
+                <span class="october-note-number" aria-hidden="true">01</span>
+                <h3>Make room.</h3>
+                <p>Welcome a neighbor. Listen without rushing. Let someone know they belong.</p>
+            </article>
+            <article class="fade-in">
+                <span class="october-note-number" aria-hidden="true">02</span>
+                <h3>Stay close.</h3>
+                <p>Check in on someone rebuilding their life. A steady friendship can mean more than a perfect answer.</p>
+            </article>
+            <article class="fade-in">
+                <span class="october-note-number" aria-hidden="true">03</span>
+                <h3>Keep showing up.</h3>
+                <p>Offer what you can: your time, encouragement, prayer, or a helping hand with the next step.</p>
+            </article>
+        </div>
+        <p class="october-season-note">A touch of Halloween, a season of community. Wherever October finds you, there is room for you here.</p>
+    </section>
 
         <section class="mobile-section meeting-mobile fade-in" id="redeeming-the-time-meeting">
             <div class="meeting-card">
                 <div class="meeting-image-wrap">
                     <img
                         class="meeting-image"
-                        src="002.jpg"
+                        src="3.jpg"
                         alt="Redeeming The Time Meeting"
                         loading="lazy"
                     >
-                    <div class="meeting-image-placeholder" aria-hidden="true">Image Coming Soon</div>
                 </div>
                 <div class="meeting-body">
                     <p class="section-eyebrow">Monthly Zoom Meeting</p>
                     <h2>Redeeming The Time <span>Meeting</span></h2>
                     <p class="meeting-intro">
-                        Join us for a monthly time of connection, encouragement, updates, prayer, and practical support as we keep building forward together in Austin.
+                        A monthly time for connection, encouragement, prayer, and practical support. Come as you are, and check in with the team for this month’s details.
                     </p>
                     <div class="meeting-details" aria-label="Redeeming The Time Meeting details">
                         <div class="meeting-detail">
                             <strong>Monthly Schedule</strong>
-                            <span>Every 21st of each month</span>
+                            <span>The 21st of each month</span>
                         </div>
                         <div class="meeting-detail">
                             <strong>Time</strong>
@@ -120,12 +138,12 @@
                             <span>Zoom Meeting</span>
                         </div>
                         <div class="meeting-detail meeting-link-detail">
-                            <strong>Placeholder Zoom Link</strong>
-                            <a href="https://zoom.us/j/12345678900" target="_blank" rel="noopener noreferrer">https://zoom.us/j/12345678900</a>
+                            <strong>Meeting Details</strong>
+                            <a href="#contact">Request the Zoom link</a>
                         </div>
                     </div>
                     <div class="meeting-countdown" aria-label="Countdown to next Redeeming The Time Meeting">
-                        <p class="meeting-countdown-label">Next meeting starts in</p>
+                        <p class="meeting-countdown-label">Next monthly date in</p>
                         <div class="countdown-grid" data-meeting-countdown>
                             <div class="countdown-unit">
                                 <strong id="meeting-countdown-days">--</strong>
@@ -145,8 +163,8 @@
                             </div>
                         </div>
                     </div>
-                    <a class="btn-primary meeting-join-btn" href="https://zoom.us/j/12345678900" target="_blank" rel="noopener noreferrer">Join Zoom Meeting</a>
-                    <p class="meeting-note">Link and details may be updated before the meeting.</p>
+                    <a class="btn-primary meeting-join-btn" href="#contact">Request Meeting Details</a>
+                    <p class="meeting-note">Please confirm this month’s meeting with the team before making plans.</p>
                 </div>
             </div>
         </section>
@@ -189,16 +207,16 @@
             </div>
             <div class="stats-grid fade-in">
                 <div class="stat-card">
-                    <strong>32+</strong>
-                    <span>Years Serving</span>
+                    <strong>Dignity</strong>
+                    <span>Every person matters</span>
                 </div>
                 <div class="stat-card">
-                    <strong>10,000+</strong>
-                    <span>Lives Reached</span>
+                    <strong>Community</strong>
+                    <span>We walk together</span>
                 </div>
                 <div class="stat-card">
-                    <strong>50+</strong>
-                    <span>Volunteers</span>
+                    <strong>Hope</strong>
+                    <span>A way forward</span>
                 </div>
             </div>
         </section>
@@ -242,19 +260,30 @@
 
         <section id="upcoming-events" class="mobile-section events-mobile">
             <div class="mobile-text-block fade-in">
-                <p class="section-eyebrow">Upcoming Community Calendar</p>
-                <h2>Stay Connected With <span>What's Coming</span></h2>
-                <p>Dates and locations may be updated as community partners confirm details. Tap a highlighted date to filter the event list below.</p>
+                <p class="section-eyebrow">The community calendar</p>
+                <h2>Make time for <span>community.</span></h2>
+                <p>Our monthly meeting and seasonal dates, in one place. Choose any date to see that day’s details.</p>
             </div>
             <div class="calendar-mobile fade-in">
                 <div class="calendar-mobile-header">
                     <button type="button" class="calendar-prev" aria-label="Previous month">&#10094;</button>
-                    <h3 class="calendar-month">May 2026</h3>
+                    <h3 class="calendar-month">October 2026</h3>
                     <button type="button" class="calendar-next" aria-label="Next month">&#10095;</button>
                 </div>
+                <div class="calendar-toolbar">
+                    <button type="button" class="calendar-today">Today</button>
+                    <button type="button" class="calendar-show-all">Whole month</button>
+                    <p class="calendar-selection-status" role="status" aria-live="polite"></p>
+                </div>
                 <div class="event-calendar-grid"></div>
+                <p class="calendar-legend"><span>● Monthly schedule</span><span>○ Seasonal observance</span></p>
             </div>
-            <div class="event-headline-cards fade-in"></div>
+            <div class="event-headline-cards fade-in"><article class="event-headline-card">
+                    <div class="event-meta"><span class="event-date">October 21, 2026</span><span class="event-time">1:00 PM Central</span></div>
+                    <h3>Redeeming The Time Meeting</h3>
+                    <p>The existing monthly schedule is the 21st at 1:00 PM Central. Contact us to confirm this month’s meeting and request the Zoom details.</p>
+                    <a class="event-detail-link" href="#contact">Request meeting details <span aria-hidden="true">↗</span></a>
+                </article></div>
         </section>
 
         <section class="mobile-section donate-mobile fade-in">
@@ -334,6 +363,8 @@
     </footer>
 
     <button class="scroll-top" aria-label="Scroll to top">&#8593;</button>
-    <script src="index_mobile.js"></script>
+    <script src="october-calendar.js?v=20261013"></script>
+    <script src="index_mobile.js?v=20261013"></script>
+    <script src="october.js?v=20261013"></script>
 </body>
 </html>

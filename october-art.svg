@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" fill="none">
+  <title>A quiet October evening</title>
+  <desc>A cream moon over sage green hills, autumn leaves, two pumpkins and small bats.</desc>
+  <path d="M60 416V248C60 126 157 42 292 42c176 0 376 92 392 248l16 126H60Z" fill="#E8EEDD"/>
+  <circle cx="504" cy="152" r="75" fill="#FBF8ED"/>
+  <path d="M64 388c115-100 212-111 313-53 101 58 182-12 314-5v125H64v-67Z" fill="#BECDB1"/>
+  <path d="M60 432c102-115 259-61 369-51 109 10 168-61 273-7v99H60v-41Z" fill="#6E8D67"/>
+  <path d="M60 455c154-51 238 43 355-7 129-55 230-14 287 2v30H60v-25Z" fill="#345841"/>
+  <path d="M36 484c151-4 246-2 350 0 122 2 224-5 338 0" stroke="#244B38" stroke-width="2" stroke-linecap="round"/>
+  <path d="M185 427c-12-61-4-127 24-203" stroke="#345841" stroke-width="3" stroke-linecap="round"/>
+  <path d="M200 254c-40-7-56-33-55-64 35 7 57 26 55 64Z" fill="#AA703F"/>
+  <path d="M195 280c29-8 49-25 54-60-30 8-55 30-54 60Z" fill="#527650"/>
+  <path d="M189 314c-42-3-62-28-62-59 36 4 61 23 62 59Z" fill="#D2AE75"/>
+  <path d="M183 346c35-5 60-24 66-59-39 8-61 29-66 59Z" fill="#6E8D67"/>
+  <path d="M181 383c-42-3-62-27-64-54 39 0 63 20 64 54Z" fill="#AA703F"/>
+  <path d="M570 456c6-60 28-113 63-160" stroke="#345841" stroke-width="3" stroke-linecap="round"/>
+  <path d="M604 341c-9-32-2-55 17-74 12 29 6 57-17 74Z" fill="#527650"/>
+  <path d="M591 365c35 6 60-9 76-35-38-3-63 8-76 35Z" fill="#D2AE75"/>
+  <path d="M580 401c-35-14-49-38-45-69 32 17 52 43 45 69Z" fill="#8C9C70"/>
+  <path d="M572 432c37 5 62-10 74-38-34-1-59 9-74 38Z" fill="#AA703F"/>
+  <path d="M329 392c-3-18-1-31 11-40" stroke="#345841" stroke-width="10" stroke-linecap="round"/>
+  <path d="M288 388c-32 5-48 34-44 62 4 33 42 45 76 37 34 8 72-4 76-37 4-28-12-57-44-62-10-2-19 1-32 4-13-3-22-6-32-4Z" fill="#BA7041"/>
+  <ellipse cx="321" cy="439" rx="34" ry="51" fill="#D3995F"/>
+  <path d="M296 394c-18 17-24 61-8 88M346 394c18 17 24 61 8 88" stroke="#9A542F" stroke-width="2"/>
+  <path d="m299 430 11-12 7 17-18-5Zm46 0-11-12-7 17 18-5Z" fill="#345841"/>
+  <path d="M305 454c10 11 22 12 32 0" stroke="#345841" stroke-width="4" stroke-linecap="round"/>
+  <path d="M423 435c-5-12-3-23 4-30" stroke="#345841" stroke-width="7" stroke-linecap="round"/>
+  <path d="M396 431c-26 3-36 19-35 39 1 22 28 32 56 27 28 5 55-5 56-27 1-20-9-36-35-39-7-1-14 0-21 3-7-3-14-4-21-3Z" fill="#E6D7B5"/>
+  <ellipse cx="417" cy="465" rx="22" ry="33" fill="#F5EACC"/>
+  <path d="M400 435c-12 15-13 39-4 57m38-57c12 15 13 39 4 57" stroke="#B8A47B" stroke-width="2"/>
+  <path d="M324 152c-10-13-20-13-33-10 6-15 0-26-9-36 18 0 30 5 36 16l6-7 7 7c6-11 18-16 36-16-9 10-15 21-9 36-13-3-23-3-34 10Z" fill="#345841"/>
+  <path d="M604 218c-7-8-14-8-22-6 4-10 0-17-6-23 12 0 20 3 24 11l4-5 4 5c4-8 12-11 24-11-6 6-10 13-6 23-8-2-15-2-22 6Z" fill="#345841"/>
+  <path d="m401 87 2 8 8 2-8 2-2 8-2-8-8-2 8-2 2-8Zm229 47 2 6 6 2-6 2-2 6-2-6-6-2 6-2 2-6Z" fill="#B56737"/>
+  <circle cx="245" cy="137" r="3" fill="#527650"/>
+  <circle cx="552" cy="264" r="3" fill="#FBF8ED"/>
+  <path d="M94 480c-14-18-19-31-12-44 15 10 19 27 12 44Zm10 0c8-17 19-24 32-23-5 15-16 23-32 23Z" fill="#527650"/>
+  <path d="M503 481c-5-20-1-36 11-44 7 19 1 35-11 44Zm9 0c9-9 22-12 34-7-9 10-21 12-34 7Z" fill="#D2AE75"/>
+</svg>

@@ -1,0 +1,309 @@
+/* October edition. Shared presentation only; checkout and verification stay in their own files. */
+.october-site {
+  --sage: #527650;
+  --sage-dark: #244b38;
+  --sage-light: #edf2e8;
+  --gold: #b56737;
+  --gold-dark: #844524;
+  --text-dark: #23362b;
+  --text-medium: #526154;
+  --text-light: #637263;
+  --off-white: #fbfaf6;
+  --soft-sage: #edf2e8;
+  --sky-blue: #f4f2e8;
+  --border-light: #dce3d7;
+  --shadow-soft: none;
+  --shadow-medium: none;
+  background: #fbfaf6;
+}
+.october-site :is(h1, h2, h3) { text-wrap: balance; }
+.october-site p { text-wrap: pretty; }
+.october-site :is(button, input, select, textarea) { font: inherit; }
+.october-site :is(a, button, input, select, textarea):focus-visible {
+  outline: 3px solid #b56737;
+  outline-offset: 5px;
+}
+.october-site section[id] { scroll-margin-top: 110px; }
+.october-site .fade-in { opacity: 1; transform: none; }
+.october-site :is(.section-eyebrow, .hero-eyebrow) {
+  color: #44643f;
+  font-size: .73rem;
+  letter-spacing: .16em;
+  font-weight: 700;
+}
+.october-site :is(.logo-main, .mobile-logo-main) { letter-spacing: -.04em; }
+.october-site :is(.mobile-header, .site-header, nav#navbar) { background: #fbfaf6; backdrop-filter: none; }
+.october-site .mobile-menu a:not(.mobile-menu-donate) {
+  background: transparent;
+  border-radius: 0;
+  padding-left: 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.october-ribbon {
+  min-height: 44px;
+  padding: 10px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background: #e8efdf;
+  color: #244b38;
+  font-size: .77rem;
+  letter-spacing: .04em;
+  line-height: 1.5;
+}
+.october-ribbon span:first-child { font-weight: 800; text-transform: uppercase; letter-spacing: .13em; }
+.october-ribbon span + span::before { content: '✦'; color: #a45d35; margin-right: 20px; }
+.october-ribbon a { text-underline-offset: 4px; }
+.october-ribbon a:hover { text-decoration: underline; }
+.october-site .skip-link { position: fixed; top: -80px; left: 16px; z-index: 1100; padding: 12px 18px; color: #fff; background: #244b38; }
+.october-site .skip-link:focus { top: 12px; }
+.hero-season-note { color: #844524; font-size: .88rem; line-height: 1.6; margin: -12px 0 25px; }
+.home-mobile .hero-season-note { margin: 15px 0 0; }
+
+/* Keep the photographs personal; give the page room to breathe. */
+.home-desktop > nav { position: sticky; background: #fbfaf6; backdrop-filter: none; }
+.home-desktop .nav-content { max-width: 1320px; padding: 22px 48px; }
+.home-desktop .nav-links { gap: 25px; }
+.home-desktop .hero { min-height: 0; padding: 64px 0 76px; background: #fbfaf6; }
+.home-desktop .hero::before { display: none; }
+.home-desktop .hero-content { max-width: 1320px; padding: 0 48px; grid-template-columns: 1.05fr 1fr; gap: 64px; }
+.home-desktop .hero-title { font-size: clamp(3rem, 5.4vw, 5.1rem); font-weight: 600; letter-spacing: -.055em; line-height: 1.06; margin-bottom: 24px; }
+.home-desktop .hero-title span { color: #42693e; }
+.home-desktop .hero-description { font-size: 1.08rem; line-height: 1.8; max-width: 440px; }
+.home-desktop .hero-image-wrapper { min-height: 0; height: 480px; border-radius: 180px 180px 6px 6px; box-shadow: none; }
+.home-desktop .hero-image-wrapper::before { display: none; }
+.home-desktop #hero-slideshow-image { min-height: 0; height: 100%; }
+.hero-photo-caption { margin: 15px 0 0; color: #69705f; font-size: .8rem; letter-spacing: .035em; }
+.photo-pause { position: absolute; bottom: 16px; right: 16px; z-index: 3; min-height: 36px; padding: 6px 12px; border: 0; border-radius: 3px; color: #fff; background: #244b38; font-size: .7rem !important; cursor: pointer; }
+.home-mobile .photo-pause { top: 22px; bottom: auto; right: 20px; }
+.home-desktop :is(.about, .mission, .programs, .events, .donate, .contact) { padding: 90px 0; }
+.home-desktop :is(.about-content, .contact-content, .programs-grid, .events-layout, .footer-content) { max-width: 1320px; padding-left: 48px; padding-right: 48px; }
+.home-desktop :is(.programs-header, .events-header) { max-width: 1320px; padding: 0 48px; text-align: left; margin-bottom: 42px; }
+.home-desktop :is(.section-title, .mission-title, .contact-title, .donate-title) { font-size: clamp(2.4rem, 3.8vw, 3.6rem); font-weight: 600; letter-spacing: -.04em; }
+.home-desktop .about-image-main { border-radius: 4px; box-shadow: none; }
+.home-desktop .about-image-main img { height: 450px; }
+.home-desktop .about-image-accent { border-radius: 50%; width: 170px; height: 170px; }
+.home-desktop .about-values { gap: 26px; }
+.home-desktop .value-number { font-size: 1.8rem; font-weight: 600; color: #244b38; }
+.home-desktop :is(.mission, .contact) { background: #edf2e8; }
+.home-desktop .mission-content { max-width: 860px; }
+.home-desktop :is(.programs, .events) { background: #fbfaf6; }
+.home-desktop .programs-grid { gap: 14px 48px; }
+.october-site .program-card {
+  border: 0;
+  border-top: 1px solid #cdd8c6;
+  border-radius: 0;
+  background: transparent;
+  padding: 28px 0;
+  box-shadow: none;
+}
+.october-site .program-card:hover { transform: none; box-shadow: none; }
+.october-site .program-number { width: auto; height: auto; display: block; border-radius: 0; background: none; margin-bottom: 14px; color: #8e542d; font-size: .78rem; font-weight: 700; letter-spacing: .08em; }
+.home-desktop .contact-form-wrapper { border: 0; background: transparent; border-radius: 0; box-shadow: none; padding: 0; }
+.home-desktop .contact-icon { background: none; box-shadow: none; width: 24px; height: 28px; }
+.home-desktop .footer { background: #233f30; }
+.home-desktop .footer-bottom { text-align: left; }
+
+/* October's story reads as an open spread, rather than a collection of cards. */
+.october-theme-section {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 82px 48px 76px;
+  display: grid;
+  grid-template-columns: 1.12fr 1fr;
+  gap: 0 68px;
+  align-items: center;
+  position: relative;
+}
+.october-theme-section::before { content: ''; position: absolute; top: 0; left: 48px; right: 48px; height: 1px; background: #d6ddcf; }
+.october-theme-intro h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.4rem, 4vw, 3.7rem);
+  font-weight: 600;
+  letter-spacing: -.045em;
+  line-height: 1.13;
+  margin-bottom: 22px;
+}
+.october-theme-intro h2 span { color: #42693e; }
+.october-theme-lead, .october-theme-intro > p:not(.section-eyebrow) { max-width: 510px; font-size: 1.04rem; line-height: 1.85; color: #526154; }
+.october-theme-intro > p + p { margin-top: 14px; }
+.october-theme-art { width: 100%; margin: 0; }
+.october-theme-art img { width: 100%; height: auto; object-fit: contain; }
+.october-theme-art :is(figcaption, p) { color: #69705f; font-size: .76rem; text-align: center; margin-top: 8px; }
+.october-theme-notes { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 44px; margin-top: 46px; }
+.october-theme-notes article { border-top: 1px solid #ccd6c5; padding-top: 22px; }
+.october-theme-notes h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.55rem; font-weight: 600; margin-bottom: 10px; }
+.october-theme-notes p { color: #526154; line-height: 1.8; font-size: .95rem; }
+.october-theme-footer, .october-season-note { grid-column: 1 / -1; margin-top: 36px; font-size: .86rem; color: #844524; }
+.october-theme-link, .october-text-link { display: inline-block; margin-top: 24px; text-decoration: underline; text-underline-offset: 5px; color: #244b38; font-weight: 700; }
+.october-note-number { display: block; color: #8e542d; font-size: .72rem; letter-spacing: .1em; margin-bottom: 12px; }
+
+/* One calendar, with quiet dates and clear selected states on every screen. */
+.home-desktop .events-layout { grid-template-columns: 1.15fr .85fr; gap: 64px; }
+.october-site :is(.event-calendar, .calendar-mobile, .calendar-mobile-wrap, .event-headlines) { background: transparent; border: 0; border-radius: 0; padding: 0; box-shadow: none; }
+.october-site :is(.calendar-header, .calendar-mobile-header) { display: flex; gap: 16px; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.october-site .calendar-month { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; font-size: 1.8rem; color: #244b38; margin: 0; }
+.october-site :is(.calendar-prev, .calendar-next) { width: 44px; height: 44px; min-width: 44px; padding: 0; background: #edf2e8; color: #244b38; border: 0; border-radius: 50%; cursor: pointer; }
+.october-site :is(.calendar-prev, .calendar-next):hover { background: #dce6d2; }
+.calendar-tools, .calendar-toolbar { display: flex; flex-wrap: wrap; gap: 4px 20px; margin-bottom: 12px; align-items: center; }
+.calendar-tools button, .calendar-toolbar button { border: 0; border-radius: 0; background: none; color: #42643c; padding: 8px 0; min-height: 44px; font-size: .8rem; font-weight: 700; cursor: pointer; text-decoration: underline; text-underline-offset: 5px; }
+.calendar-toolbar .calendar-selection-status { flex-basis: 100%; }
+.calendar-selection-status { min-height: 1.6em; font-size: .8rem; line-height: 1.6; color: #526154; margin: 0 0 16px; }
+.october-site .event-calendar-grid { gap: 3px; }
+.october-site .calendar-day-header { font-size: .65rem; letter-spacing: .075em; padding: 10px 0 13px; color: #637263; }
+.october-site .calendar-day {
+  min-width: 0; min-height: 68px; height: auto; padding: 9px 4px;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 5px;
+  border: 0; border-radius: 2px; background: transparent; box-shadow: none;
+  color: #244b38; cursor: pointer; transition: background .2s ease;
+}
+.october-site .calendar-day:not(.empty):hover { background: #e8efdf; transform: none; box-shadow: none; }
+.october-site .calendar-day.empty { border: 0; background: transparent; cursor: default; }
+.october-site .calendar-day.today { border: 0; box-shadow: none; }
+.october-site .calendar-day.today .calendar-date { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px; }
+.october-site .calendar-day.has-event { background: #edf2e8; }
+.october-site .calendar-day.has-observance { background: #f4e8db; }
+.october-site .calendar-day.active-filter { background: #244b38; color: #fff; }
+.october-site .calendar-day.active-filter .calendar-date { color: #fff; }
+.october-site .calendar-date { color: #244b38; font-size: .95rem; line-height: 1.2; font-weight: 700; }
+.october-site .calendar-event-markers { gap: 3px; width: 100%; align-items: center; }
+.october-site .calendar-event-marker { width: auto; height: auto; border-radius: 0; background: none; color: #42643c; padding: 0; max-width: 100%; font-size: .58rem; line-height: 1.2; letter-spacing: 0; font-weight: 700; }
+.october-site .calendar-event-marker.observance-label { color: #844524; }
+.october-site .active-filter .calendar-event-marker { color: #fff; }
+.calendar-legend { display: flex; flex-wrap: wrap; gap: 18px; color: #637263; margin-top: 18px; font-size: .72rem; }
+.calendar-legend span:first-child { color: #42643c; }
+.calendar-legend span:last-child { color: #844524; }
+.october-site .event-headline-cards { display: grid; gap: 0; }
+.october-site .event-headline-card { border: 0; border-top: 1px solid #cdd8c6; border-radius: 0; background: transparent; box-shadow: none; padding: 26px 0; }
+.october-site .event-headline-card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; font-weight: 600; line-height: 1.25; }
+.october-site .event-meta { gap: 8px 18px; }
+.october-site :is(.event-date, .event-time, .event-status) { border: 0; border-radius: 0; padding: 0; background: transparent; justify-content: flex-start; font-size: .73rem; line-height: 1.5; }
+.october-site .event-date { color: #42643c; }
+.october-site .event-time { color: #526154; }
+.october-site .event-status { color: #844524; }
+.october-site .event-location { font-size: .86rem; }
+.october-site .event-headline-card p { font-size: .95rem; line-height: 1.75; }
+.event-details-link, .event-detail-link { display: inline-block; margin-top: 14px; color: #244b38; font-size: .86rem; font-weight: 700; text-decoration: underline !important; text-underline-offset: 5px; }
+.calendar-month-note, .calendar-agenda-note { color: #637263; font-size: .85rem; padding-top: 15px; border-top: 1px solid #d6ddcf; }
+
+/* Mobile home: story first, then the people behind it. */
+.home-mobile .hero-mobile { padding: 28px 24px 52px; background: #fbfaf6; display: flex; flex-direction: column; }
+.home-mobile .hero-mobile-content { order: -1; padding: 0; margin: 0 0 34px; }
+.home-mobile .hero-mobile-content h1 { font-size: clamp(2.8rem, 11vw, 4.2rem); font-weight: 600; letter-spacing: -.045em; line-height: 1.07; max-width: 560px; }
+.home-mobile .hero-mobile-text { line-height: 1.8; max-width: 580px; }
+.home-mobile .hero-mobile-image-wrap { height: 340px; min-height: 0; max-height: none; border-radius: 120px 120px 4px 4px; box-shadow: none; }
+.home-mobile .hero-mobile-image-wrap .hero-photo-caption { position: absolute; bottom: 15px; left: 18px; right: 18px; color: #fff; margin: 0; z-index: 1; font-size: .72rem; text-shadow: 0 1px 8px #23362b; }
+.home-mobile .mobile-section { padding: 52px 24px; }
+.home-mobile :is(.mobile-text-block h2, .mission-mobile h2, .donate-mobile h2, .meeting-body h2, .bracelet-promo-body h2) { font-size: 2.35rem; font-weight: 600; letter-spacing: -.035em; }
+.home-mobile :is(.meeting-card, .bracelet-promo-card, .mobile-image-card, .contact-info-card, .contact-form-card, .stat-card) { background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+.home-mobile :is(.meeting-mobile, .bracelet-promo-mobile, .programs-mobile, .events-mobile, .contact-mobile) { background: #fbfaf6; }
+.home-mobile :is(.meeting-image-wrap, .bracelet-image-link) { background: #edf2e8; min-height: 0; border-radius: 4px; }
+.home-mobile .meeting-image { height: 280px; }
+.home-mobile .bracelet-promo-image { height: 280px; object-fit: contain; }
+.home-mobile :is(.meeting-body, .bracelet-promo-body) { padding: 28px 0 0; }
+.home-mobile .meeting-details { gap: 18px; }
+.home-mobile .meeting-detail { background: transparent; border: 0; border-radius: 0; padding: 0; }
+.home-mobile .meeting-countdown { background: #edf2e8; border: 0; border-radius: 0; padding: 22px 16px; }
+.home-mobile .countdown-unit { background: none; border-radius: 0; }
+.home-mobile .countdown-unit strong { font-size: 1.7rem; font-weight: 600; }
+.home-mobile .meeting-countdown-label { font-size: .7rem; color: #42643c; }
+.home-mobile .meeting-note { text-align: left; }
+.home-mobile .stats-grid { gap: 22px; grid-template-columns: 1fr; margin-top: 30px; }
+.home-mobile .stat-card { padding: 0; text-align: left; }
+.home-mobile .stat-card strong { font-size: 1.55rem; font-weight: 600; }
+.home-mobile .stat-card span { letter-spacing: .025em; text-transform: none; font-size: .9rem; }
+.home-mobile .mission-mobile { background: #edf2e8; border: 0; }
+.home-mobile .program-list { gap: 0; }
+.home-mobile .contact-info-mobile { gap: 24px; }
+.home-mobile :is(.contact-info-card, .contact-form-card) { padding: 0; }
+.home-mobile .contact-form-card { margin-top: 32px; }
+.home-mobile .mobile-footer { background: #233f30; color: #eef2e7; padding: 34px 24px; }
+
+/* Apply the same open, grounded style to the mission, people, and resources pages. */
+.october-subpage .mobile-section { background: transparent; padding: 48px 24px; max-width: 1160px; margin: 0 auto; }
+.october-subpage :is(.section-card, .pillar-card, .commitment-card, .vision-content, .team-card, .value-item, .quote-card, .finder-card, .result-card, .step-card, .location-summary-card) { border: 0; background: transparent; border-radius: 0; box-shadow: none; padding-left: 0; padding-right: 0; }
+.october-subpage :is(.pillar-card, .commitment-card, .value-item, .quote-card, .result-card, .step-card) { border-top: 1px solid #cdd8c6; padding-top: 24px; }
+.october-subpage :is(.mission-hero, .programs-hero, .team-hero) { padding: 28px 24px 48px; max-width: 1160px; margin: 0 auto; background: transparent; }
+.october-subpage :is(.mission-hero-image-wrap, .programs-hero-image-wrap, .team-hero-image-wrap) { border-radius: 120px 120px 4px 4px; box-shadow: none; }
+.october-subpage :is(.mission-hero-content, .programs-hero-content, .team-hero-content) { padding-left: 0; padding-right: 0; }
+.october-subpage :is(.mission-hero-content h1, .programs-hero-content h1, .team-hero-content h1) { font-weight: 600; letter-spacing: -.04em; }
+.october-subpage :is(.split-card, .gallery-card, .team-card-image) { border-radius: 4px; box-shadow: none; border: 0; }
+.october-subpage .team-card-body { padding: 22px 0; }
+.october-subpage :is(.need-chip, .team-role-badge, .result-badge) { background: transparent; border-radius: 0; border: 0; padding-left: 0; }
+.october-subpage :is(.callout-card, .volunteer-card, .urgent-help-card) { border-radius: 0; box-shadow: none; background: #244b38; padding: 32px 26px; }
+.october-subpage :is(.callout-card, .volunteer-card, .urgent-help-card) .section-eyebrow { color: #eef2e7; }
+.october-subpage .mobile-footer { background: #233f30; color: #eef2e7; }
+
+/* Product browsing gets the seasonal paper-and-green palette; purchase controls retain their styles. */
+.october-shop :is(.hero, .pies-feature, .shop-tools, .product-card) { border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+.october-shop .product-card { border-top: 1px solid #cdd8c6; padding-top: 22px; }
+.october-shop .product-image-wrap { border-radius: 4px; background: #edf2e8; }
+.october-shop .hero { background: #edf2e8; }
+.october-shop .pies-feature { border-top: 1px solid #cdd8c6; border-bottom: 1px solid #cdd8c6; }
+.october-shop .product-body { padding-left: 0; padding-right: 0; }
+.october-shop .product-card:hover { transform: none; }
+.october-shop .hero::before { display: none; }
+.october-shop-desktop > nav { position: sticky; }
+.october-shop-desktop .hero { padding-top: 64px; padding-bottom: 64px; }
+
+@media (min-width: 760px) {
+  .home-mobile .hero-mobile, .home-mobile .mobile-section { max-width: 1160px; margin: 0 auto; padding: 60px 40px; }
+  .home-mobile .hero-mobile { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 38px; }
+  .home-mobile .hero-mobile-content { order: initial; grid-column: 1; grid-row: 1; }
+  .home-mobile .hero-mobile-image-wrap { grid-column: 2; grid-row: 1; height: 420px; }
+  .home-mobile .program-list, .october-subpage :is(.program-list, .pillar-list, .team-card-list, .steps-list) { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 44px; }
+  .home-mobile .stats-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .home-mobile :is(.meeting-card, .bracelet-promo-card) { display: grid; grid-template-columns: 1fr 1.1fr; gap: 44px; align-items: center; }
+  .home-mobile :is(.meeting-body, .bracelet-promo-body) { padding: 0; }
+  .home-mobile :is(.calendar-mobile, .calendar-mobile-wrap) { max-width: 650px; }
+  .october-subpage :is(.mission-hero, .programs-hero, .team-hero) { display: grid; grid-template-columns: 1fr 1.1fr; gap: 50px; align-items: center; padding: 60px 40px; }
+  .october-subpage :is(.mission-hero-image-wrap, .programs-hero-image-wrap, .team-hero-image-wrap) { height: 430px; min-height: 0; }
+  .october-subpage :is(.mission-hero-content h1, .programs-hero-content h1, .team-hero-content h1) { font-size: 3.5rem; }
+  .october-subpage .mobile-section { padding-left: 40px; padding-right: 40px; }
+  .october-subpage .mobile-header-inner { max-width: 1160px; margin: 0 auto; padding: 20px 40px; }
+}
+@media (max-width: 1050px) {
+  .home-desktop .hero-content { gap: 36px; padding-left: 32px; padding-right: 32px; }
+  .home-desktop .hero-image-wrapper { height: 400px; }
+  .home-desktop .nav-content { padding-left: 28px; padding-right: 28px; }
+  .home-desktop .nav-links { gap: 15px; }
+  .home-desktop .events-layout { grid-template-columns: 1fr; gap: 36px; }
+}
+@media (max-width: 759px) {
+  .october-ribbon { padding: 10px 16px; gap: 12px; font-size: .67rem; }
+  .october-ribbon span + span::before { margin-right: 12px; }
+  .october-theme-section { padding: 50px 24px; grid-template-columns: 1fr; gap: 24px; }
+  .october-theme-section::before { left: 24px; right: 24px; }
+  .october-theme-intro h2 { font-size: 2.6rem; }
+  .october-theme-art { max-width: 520px; margin: 0 auto; }
+  .october-theme-notes { grid-template-columns: 1fr; gap: 22px; margin-top: 0; }
+  .october-theme-notes h3 { font-size: 1.45rem; }
+  .october-theme-footer, .october-season-note { margin-top: 4px; }
+  .home-desktop .hero { padding: 40px 0 52px; }
+  .home-desktop .hero-content { grid-template-columns: 1fr; padding: 0 24px; }
+  .home-desktop .hero-title { font-size: 3.2rem; }
+  .home-desktop .hero-image-wrapper { height: 330px; }
+  .home-desktop :is(.about, .mission, .programs, .events, .donate, .contact) { padding: 54px 0; }
+  .home-desktop :is(.about-content, .contact-content, .programs-grid, .events-layout, .footer-content, .programs-header, .events-header) { padding-left: 24px; padding-right: 24px; }
+  .home-desktop .programs-grid { grid-template-columns: 1fr; }
+  .home-desktop .calendar-month { font-size: 1.5rem; }
+  .october-site .calendar-day { min-height: 60px; }
+  .october-site .calendar-event-marker { font-size: .5rem; }
+  .october-site .mobile-logo-main { font-size: 1.12rem; }
+  .october-site .mobile-logo-tag { font-size: .55rem; letter-spacing: .08em; }
+}
+@media (max-width: 380px) {
+  .october-ribbon { flex-wrap: wrap; gap: 2px 12px; }
+  .home-mobile .hero-mobile, .home-mobile .mobile-section { padding-left: 18px; padding-right: 18px; }
+  .home-mobile .hero-mobile-image-wrap { height: 290px; }
+  .october-theme-section { padding-left: 18px; padding-right: 18px; }
+  .october-site .calendar-day { min-height: 54px; padding-left: 1px; padding-right: 1px; }
+  .october-site .calendar-event-marker { font-size: .46rem; }
+  .home-mobile .countdown-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .october-site { scroll-behavior: auto; }
+  html:has(.october-site) { scroll-behavior: auto; }
+  .october-site *, .october-site *::before, .october-site *::after { animation: none !important; transition: none !important; }
+}

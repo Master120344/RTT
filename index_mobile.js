@@ -7,84 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     var contactForm = document.querySelector('.contact-form');
     var statusBox = document.querySelector('.form-status');
     var heroImage = document.getElementById('hero-mobile-slideshow');
-    var calendarGrid = document.querySelector('.event-calendar-grid');
-    var calendarMonth = document.querySelector('.calendar-month');
-    var calendarPrev = document.querySelector('.calendar-prev');
-    var calendarNext = document.querySelector('.calendar-next');
-    var eventHeadlineCards = document.querySelector('.event-headline-cards');
     var braceletPromoImage = document.querySelector('.bracelet-promo-image');
     var meetingImage = document.querySelector('.meeting-image');
     var countdownRoot = document.querySelector('[data-meeting-countdown]');
-    var currentDate = new Date(2026, 4, 1);
-    var activeFilterDate = null;
-
-    var events = [
-        {
-            title: 'Community Support Table',
-            date: '2026-05-16',
-            time: '10:00 AM',
-            location: 'Austin, TX',
-            status: 'Open',
-            description: 'A local support table with encouragement, resource guidance, and connection for individuals and families rebuilding stability.',
-            featured: true
-        },
-        {
-            title: 'Mentorship Orientation',
-            date: '2026-05-19',
-            time: '6:00 PM',
-            location: 'North Austin Area',
-            status: 'RSVP Soon',
-            description: 'An introductory orientation for volunteers interested in consistent mentorship, encouragement, and follow up support.'
-        },
-        {
-            title: 'Volunteer Outreach Day',
-            date: '2026-05-23',
-            time: '9:30 AM',
-            location: 'Community Partner Location',
-            status: 'Volunteers Needed',
-            description: 'Volunteers will gather for practical outreach, community check ins, and encouragement across the Austin area.'
-        },
-        {
-            title: 'Clothing and Hygiene Kit Prep',
-            date: '2026-05-27',
-            time: '5:30 PM',
-            location: 'South Austin Area',
-            status: 'Volunteers Needed',
-            description: 'A hands on preparation night to organize basic care items for upcoming outreach and support visits.'
-        },
-        {
-            title: 'Family Encouragement Meet Up',
-            date: '2026-05-30',
-            time: '11:00 AM',
-            location: 'Location To Be Announced',
-            status: 'Planning',
-            description: 'A supportive meet up for families navigating transition, restoration, and the next steps forward together.'
-        },
-        {
-            title: 'Reentry Resource Check In',
-            date: '2026-06-06',
-            time: '10:30 AM',
-            location: 'East Austin Area',
-            status: 'Open',
-            description: 'A practical check in for people looking for resource direction, mentoring connections, and community support.'
-        },
-        {
-            title: 'Prayer and Practical Support Night',
-            date: '2026-06-12',
-            time: '6:30 PM',
-            location: 'Community Partner Location',
-            status: 'Open',
-            description: 'An evening of prayer, encouragement, and practical next-step support for neighbors and families in Austin.'
-        },
-        {
-            title: 'Back to Work Readiness Session',
-            date: '2026-06-20',
-            time: '10:00 AM',
-            location: 'Location To Be Announced',
-            status: 'RSVP Soon',
-            description: 'A readiness session focused on confidence, preparation, and practical steps for returning to work.'
-        }
-    ];
 
     function setInlineStyles(el, styles) {
         if (!el) return;
@@ -299,27 +224,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    var heroImages = [];
-    for (var i = 1; i <= 25; i++) {
-        heroImages.push(i + '.jpg');
-    }
+    var heroImages = ['1.jpg', '2.jpg', '3.jpg', '7.jpg', '16.jpg', '17.jpg'];
 
     heroImages.forEach(function (src) {
         var preloadImage = new Image();
         preloadImage.src = src;
     });
 
-    if (heroImage) {
+    if (heroImage && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         var slideIndex = 0;
         setInterval(function () {
+            if (document.hidden || heroImage.dataset.paused === 'true') return;
             slideIndex = (slideIndex + 1) % heroImages.length;
             heroImage.classList.add('is-fading');
             setTimeout(function () {
                 heroImage.src = heroImages[slideIndex];
-                heroImage.alt = 'Redeeming The Time Today slideshow image ' + (slideIndex + 1);
+                heroImage.alt = 'People and moments from the Redeeming The Time Today community';
                 heroImage.classList.remove('is-fading');
             }, 350);
-        }, 4000);
+        }, 6000);
     }
 
     if (braceletPromoImage) {
@@ -422,176 +345,6 @@ document.addEventListener('DOMContentLoaded', function () {
         updateMeetingCountdown();
         setInterval(updateMeetingCountdown, 1000);
     }
-
-    function getLocalDateString(date) {
-        var year = date.getFullYear();
-        var month = String(date.getMonth() + 1).padStart(2, '0');
-        var day = String(date.getDate()).padStart(2, '0');
-        return year + '-' + month + '-' + day;
-    }
-
-    function formatMonthYear(date) {
-        return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
-    }
-
-    function getEventsForDate(dateString) {
-        return events.filter(function (event) {
-            return event.date === dateString;
-        });
-    }
-
-    function renderEventHeadlines(selectedDate) {
-        if (!eventHeadlineCards) return;
-
-        var visibleEvents = events.slice().sort(function (a, b) {
-            return new Date(a.date) - new Date(b.date);
-        });
-
-        if (selectedDate) {
-            var filtered = visibleEvents.filter(function (event) {
-                return event.date === selectedDate;
-            });
-            if (filtered.length > 0) {
-                visibleEvents = filtered;
-            }
-        }
-
-        eventHeadlineCards.innerHTML = '';
-
-        if (!visibleEvents.length) {
-            eventHeadlineCards.innerHTML = '<div class="event-headline-card"><h3>No events on this date</h3><p>Please choose another highlighted date.</p></div>';
-            return;
-        }
-
-        visibleEvents.forEach(function (event) {
-            var card = document.createElement('article');
-            card.className = 'event-headline-card';
-
-            if (event.featured) {
-                card.classList.add('featured-event');
-            }
-
-            var eventDate = new Date(event.date + 'T00:00:00');
-            var prettyDate = eventDate.toLocaleDateString('en-US', {
-                weekday: 'long',
-                month: 'long',
-                day: 'numeric',
-                year: 'numeric'
-            });
-
-            var mapLink = 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(event.location);
-
-            card.innerHTML =
-                '<div class="event-meta">' +
-                '<span class="event-date">' + prettyDate + '</span>' +
-                '<span class="event-time">' + event.time + '</span>' +
-                '<span class="event-status">' + event.status + '</span>' +
-                '</div>' +
-                '<h3>' + event.title + '</h3>' +
-                '<p class="event-location"><span class="event-location-text">' + event.location + '</span><a class="event-map-link" href="' + mapLink + '" target="_blank" rel="noopener noreferrer" aria-label="Open map for ' + event.title + '">Map</a></p>' +
-                '<p class="event-purpose">' + event.description + '</p>';
-
-            eventHeadlineCards.appendChild(card);
-        });
-    }
-
-    function renderCalendar(date) {
-        if (!calendarGrid || !calendarMonth) return;
-
-        calendarGrid.innerHTML = '';
-        calendarMonth.textContent = formatMonthYear(date);
-
-        var year = date.getFullYear();
-        var month = date.getMonth();
-        var firstDay = new Date(year, month, 1);
-        var startingDay = firstDay.getDay();
-        var daysInMonth = new Date(year, month + 1, 0).getDate();
-        var dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
-
-        dayNames.forEach(function (dayName) {
-            var header = document.createElement('div');
-            header.className = 'calendar-day-header';
-            header.textContent = dayName;
-            calendarGrid.appendChild(header);
-        });
-
-        for (var i = 0; i < startingDay; i++) {
-            var emptyCell = document.createElement('div');
-            emptyCell.className = 'calendar-day empty';
-            calendarGrid.appendChild(emptyCell);
-        }
-
-        var todayString = getLocalDateString(new Date());
-
-        for (var day = 1; day <= daysInMonth; day++) {
-            var cellDate = new Date(year, month, day);
-            var cellDateString = getLocalDateString(cellDate);
-            var dayEvents = getEventsForDate(cellDateString);
-
-            var cell = document.createElement('div');
-            cell.className = 'calendar-day';
-
-            if (cellDateString === todayString) {
-                cell.classList.add('today');
-            }
-
-            if (activeFilterDate === cellDateString) {
-                cell.classList.add('active-filter');
-            }
-
-            var dateLabel = document.createElement('div');
-            dateLabel.className = 'calendar-date';
-            dateLabel.textContent = day;
-            cell.appendChild(dateLabel);
-
-            if (dayEvents.length > 0) {
-                cell.classList.add('has-event');
-
-                var markers = document.createElement('div');
-                markers.className = 'calendar-event-markers';
-
-                var marker = document.createElement('div');
-                marker.className = 'calendar-event-marker';
-                markers.appendChild(marker);
-
-                cell.appendChild(markers);
-
-                (function (ds) {
-                    cell.addEventListener('click', function () {
-                        activeFilterDate = ds;
-                        renderCalendar(currentDate);
-                        renderEventHeadlines(activeFilterDate);
-
-                        var targetSection = document.getElementById('upcoming-events');
-                        if (targetSection) {
-                            var top = targetSection.getBoundingClientRect().top + window.scrollY - 70;
-                            window.scrollTo({ top: top, behavior: 'smooth' });
-                        }
-                    });
-                })(cellDateString);
-            }
-
-            calendarGrid.appendChild(cell);
-        }
-    }
-
-    if (calendarPrev) {
-        calendarPrev.addEventListener('click', function () {
-            currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
-            renderCalendar(currentDate);
-        });
-    }
-
-    if (calendarNext) {
-        calendarNext.addEventListener('click', function () {
-            currentDate = new Date(currentDate.getFullYear(), currentDate.getMonth() + 1, 1);
-            renderCalendar(currentDate);
-        });
-    }
-
-    activeFilterDate = '2026-05-16';
-    renderCalendar(currentDate);
-    renderEventHeadlines(activeFilterDate);
 
     decorateLabels();
 
